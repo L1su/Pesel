@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Sprawdź poprawność swojego numeru PESEL">
+    <meta name="dcterms.description" lang="pl" content="Sprawdź poprawność swojego numeru PESEL">
+    <meta name="keywords" content="Sprawdź poprawność PESELU">
+    <meta property="og:site_name" content="Sprawdź PESEL - Bezpiecznie i darmowo">
+    <meta property="og:title" content="Sprawdź PESEL - Bezpiecznie i darmowo">
+    <meta property="og:url" content="https://L1su.github.io/pesel/">
+    <meta property="og:image" content="img/favicon.ico">
+    <link rel="author" href="https://github.com/L1su">
+    <link rel="icon" href="img/favicon.ico" type="image/png">
+    <meta name="theme-color" content="#011627" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/fontello.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <title>Sprawdź PESEL</title>
+    <!--[if lt IE 9]>
+	    <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv-printshiv.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="header__tytul">
+            Sprawdź PESEL!
+        </h1>
+
+        <form class="form" autocomplete="off">
+            <label class="form__label"><i class="form__label--icon icon-user"></i><input class="form__text" type="text" maxlength="11" placeholder="Wpisz PESEL" autofocus onkeypress="return NoEnter()"> </label>
+            <nav class="form__nav">
+                <button class="form__button form__button--sprawdz" type="button" aria-label="Sprawdź" title="Sprawdź" onclick="sprawdz()">Sprawdź</button>
+                <button class="form__button form__button--reset" type="reset" value="Reset" aria-label="Reset" title="Reset" onclick="resett()">Reset</button>
+                <button class="form__button form__button--ukryj" type="button" aria-label="Ukryj/Pokaż" title="Ukryj/Pokaż" onclick="ukrywanie()">Ukryj</button>
+                <button class="form__button form__button--info" type="button" aria-label="Informacje o stronie" title="Informacje o stronie" onclick="location.href='#info';"></button>
+            </nav>
+        </form>
+    </header>
+
+    <aside id="info" class="aside aside__info">
+        <a href="#" class="aside__close icon-cancel-circled"></a>
+        <p>Strona wykonuje działania po stronie użytkownika i NIE ZBIERA ŻADNYCH informacji!</p>
+        <p>Nie każda strona jest bezpieczna, chroń swoje dane!</p>
+    </aside>
+
+    <aside class="aside aside_stan">
+    </aside>
+
+    <noscript>
+    <aside class="aside aside__noJS">
+        <p>Twoja przeglądarka ma wyłączoną osługe JavaScript</p> 
+        <p>Strona może działać nieprawidłowo!</p>
+        <h5><a href="#info" class="aside__noJS--info icon-info">Informacje na temat strony</a></h5>
+    </aside>
+    </noscript>
+
+    <main class="main">
+        <article class="main__algorytm">
+            <h2 class="main__algorytm--h2">Algorytm sprawdzający poprawność PESELU</h2>
+            <h4 class="main__algorytm--h4">1.Mnożenie</h4>
+            <div>R * 0</div>
+            <div>R * 2</div>
+
+            <div>M * 0</div>
+            <div>M * 7</div>
+
+            <div>D * 0</div>
+            <div>D * 8</div>
+
+            <div>P * 0</div>
+            <div>P * 3</div>
+            <div>P * 6</div>
+            <div>P * 2</div>
+
+            <div>K - Liczba kontrolna którą będziemy obliczać (nie wykonujemy na niej żadnych działań)</div>
+            <h4 class="main__algorytm--h4">2.Dodawanie </h4>
+            <div>Dodajemy iloczyny.</div>
+            <div>Jeśli otrzymana liczba iloczynu jest dwucyfrowa, dodajemy jedności np. z liczby 63 dodajemy tylko 3</div>
+            <h4 class="main__algorytm--h4">3.Odejmowanie</h4>
+            <div>10-(liczba jednosci otrzymanego wyniku)=</div>
+            <h4 class="main__algorytm--h4">4.Sprawdzenie</h4>
+            <div>Ostatnia liczba PESELU (nasze K) powinna się równać liczbie z powyższych obliczeń</div>
+        </article>
+
+        <article class="main__lata">
+            <h2 class="main__lata--h2">Oznaczenia miesięcy w danych stuleciach</h2>
+            <div class="main__lata--ResTabela">
+                <table class="main__lata--Tabela">
+                    <tr>
+                        <th>Miesiąc</th>
+                        <th>1800-1899</th>
+                        <th>1900-1999</th>
+                        <th>2000-2099</th>
+                        <th>2100-2199</th>
+                        <th>2200-2299</th>
+                    </tr>
+                    <tr>
+                        <td>Styczeń</td>
+                        <td>81</td>
+                        <td>01</td>
+                        <td>21</td>
+                        <td>41</td>
+                        <td>61</td>
+                    </tr>
+                    <tr>
+                        <td>Luty</td>
+                        <td>82</td>
+                        <td>02</td>
+                        <td>22</td>
+                        <td>42</td>
+                        <td>62</td>
+                    </tr>
+                    <tr>
+                        <td>Marzec</td>
+                        <td>83</td>
+                        <td>03</td>
+                        <td>23</td>
+                        <td>43</td>
+                        <td>63</td>
+                    </tr>
+                    <tr>
+                        <td>Kwiecień</td>
+                        <td>84</td>
+                        <td>04</td>
+                        <td>24</td>
+                        <td>44</td>
+                        <td>64</td>
+                    </tr>
+                    <tr>
+                        <td>Maj</td>
+                        <td>85</td>
+                        <td>05</td>
+                        <td>25</td>
+                        <td>45</td>
+                        <td>65</td>
+                    </tr>
+                    <tr>
+                        <td>Czerwiec</td>
+                        <td>86</td>
+                        <td>06</td>
+                        <td>26</td>
+                        <td>46</td>
+                        <td>66</td>
+                    </tr>
+                    <tr>
+                        <td>Lipiec</td>
+                        <td>87</td>
+                        <td>07</td>
+                        <td>27</td>
+                        <td>47</td>
+                        <td>67</td>
+                    </tr>
+                    <tr>
+                        <td>Sierpień</td>
+                        <td>88</td>
+                        <td>08</td>
+                        <td>28</td>
+                        <td>48</td>
+                        <td>68</td>
+                    </tr>
+                    <tr>
+                        <td>Wrzesień</td>
+                        <td>89</td>
+                        <td>09</td>
+                        <td>29</td>
+                        <td>49</td>
+                        <td>69</td>
+                    </tr>
+                    <tr>
+                        <td>Październik</td>
+                        <td>90</td>
+                        <td>10</td>
+                        <td>30</td>
+                        <td>50</td>
+                        <td>70</td>
+                    </tr>
+                    <tr>
+                        <td>Listopad</td>
+                        <td>91</td>
+                        <td>11</td>
+                        <td>31</td>
+                        <td>51</td>
+                        <td>71</td>
+                    </tr>
+                    <tr>
+                        <td>Grudzień</td>
+                        <td>92</td>
+                        <td>12</td>
+                        <td>32</td>
+                        <td>52</td>
+                        <td>72</td>
+                    </tr>
+                </table>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <a href="https://github.com/L1su" target="_blank" class="footer__git"></a>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
