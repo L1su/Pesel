@@ -12,4 +12,4 @@ Aplikacja pozwala na ukrycie wpisywanego PESELU
 **Żadne dane nie są zbierane!** 
 
 # Live
-[Zobacz stronę](https://L1su.github.io/pesel/)
+[Zobacz stronę](https://L1su.github.io/Pesel/)
