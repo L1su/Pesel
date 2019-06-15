@@ -8,6 +8,6 @@ Na stronie znajdziemy informacje na temat tego w jaki sposób wykonać obliczeni
  - Nauka podstaw JS
  
 ## :lock: Bezpieczeństwo:
-Strona jest napisana w HTML, CSS oraz JavaScript wszystkie działania odbywają się po stronie klienta i **nie sa przesyłane oraz zapisywane żadne dane. **
+Strona jest napisana w HTML, CSS oraz JavaScript wszystkie działania odbywają się po stronie klienta i ** nie sa przesyłane oraz zapisywane żadne dane. **
 Istnieje możliwość ukrycia wpisywanego PESELU.
 
